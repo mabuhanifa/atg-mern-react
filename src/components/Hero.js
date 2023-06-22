@@ -1,9 +1,11 @@
 import { FiArrowLeft } from "react-icons/fi";
 import { HiOutlinePencil } from "react-icons/hi";
 import { useModal } from "../contextAPI/context";
+import Signin from "./Signin";
 
 export default function Hero() {
   const { login, setLogin, signup, setSignup } = useModal();
+  console.log(login);
   return (
     <div className="h-[440px] bg-gr">
       <div className="md:hidden flex justify-between items-center pl-4 pr-4 pt-4 text-white">
@@ -35,6 +37,7 @@ export default function Hero() {
           <HiOutlinePencil size={20} />
         </button>
       </div>
+      <Signin view={login} setLogin={setLogin} setSignup={setSignup} />
     </div>
   );
 }

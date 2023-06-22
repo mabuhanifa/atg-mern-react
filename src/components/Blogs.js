@@ -3,7 +3,7 @@ import { RiLoginBoxLine } from "react-icons/ri";
 import { useModal } from "../contextAPI/context";
 
 export default function Blogs() {
-  const {  user } = useModal();
+  const {  setLogin, setSignup, user, setUser } = useModal();
 
   return (
     <div className="md:px-[200px] py-10">
@@ -26,6 +26,10 @@ export default function Blogs() {
           {!user.name ? (
             <button
               className="flex items-center gap-x-2 font-[500] bg-[#2F6CE5] py-2 text-white rounded px-3"
+              onClick={() => {
+                setLogin(true);
+                setSignup(false);
+              }}
             >
               <AiOutlineUsergroupAdd size={20} />
               <p>Join Group</p>

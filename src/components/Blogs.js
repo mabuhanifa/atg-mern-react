@@ -3,7 +3,7 @@ import { RiLoginBoxLine } from "react-icons/ri";
 import { useModal } from "../contextAPI/context";
 
 export default function Blogs() {
-  const {  setLogin, setSignup, user, setUser } = useModal();
+  const { setLogin, setSignup, user, setUser } = useModal();
 
   return (
     <div className="md:px-[200px] py-10">
@@ -37,6 +37,9 @@ export default function Blogs() {
           ) : (
             <button
               className="flex items-center border gap-x-2 font-[500]  px-3 py-2 rounded text-gray-500"
+              onClick={() => {
+                setUser({});
+              }}
             >
               <RiLoginBoxLine size={20} />
               <p>Leave Group</p>
@@ -56,13 +59,9 @@ export default function Blogs() {
       </nav>
 
       <div className="flex justify-between my-10">
-        <div className="flex flex-col">
-          
-        </div>
+        <div className="flex flex-col"></div>
 
-        <div className="hidden md:block">
-          
-        </div>
+        <div className="hidden md:block"></div>
       </div>
     </div>
   );

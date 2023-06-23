@@ -9,17 +9,17 @@ export default function Topics({ topic }) {
       </div>
       {follow ? (
         <button
-          className="bg-[#EDEEF0] text-black px-5 py-1 rounded-[14px] text-[12px]"
-          onClick={() => setFollow(false)}
+          className="bg-black text-white px-3 py-1 rounded-[14px] text-[12px]"
+          onClick={() => setFollow((m) => !m)}
         >
-          Follow
+          Followed
         </button>
       ) : (
         <button
-          className="bg-black text-white px-3 py-1 rounded-[14px] text-[12px]"
-          onClick={() => setFollow(true)}
+          className="bg-[#EDEEF0] text-black px-5 py-1 rounded-[14px] text-[12px]"
+          onClick={() => setFollow((m) => !m)}
         >
-          Followed
+          Follow
         </button>
       )}
     </div>

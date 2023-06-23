@@ -3,7 +3,6 @@ import { BsThreeDots } from "react-icons/bs";
 import { GiShare } from "react-icons/gi";
 import { IoEyeOutline } from "react-icons/io5";
 import { TfiPencilAlt } from "react-icons/tfi";
-import jungle from "../assets/jungle.png";
 import user from "../assets/user.png";
 import Options from "./Options";
 
@@ -11,7 +10,7 @@ export default function Blog() {
   const [option, setOption] = useState(false);
   return (
     <div className="border rounded my-2">
-      <img src={jungle} alt="jungle" />
+      <img src="https://i.ibb.co/RpCH0Q8/jungle.png" alt="jungle" />
       <div className="p-4">
         <div className="flex items-center gap-x-2">
           <TfiPencilAlt />

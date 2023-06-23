@@ -4,6 +4,7 @@ import { useModal } from "../contextAPI/context";
 import Blog from "./Blog";
 import Blog2 from "./Blog2";
 import Blog3 from "./Blog3";
+import Posts from "./Posts";
 
 export default function Blogs() {
   const { setLogin, setSignup, user, setUser } = useModal();
@@ -63,12 +64,14 @@ export default function Blogs() {
 
       <div className="flex justify-between my-10">
         <div className="flex flex-col">
-          <Blog/>
-          <Blog2/>
-          <Blog3/>
+          <Blog />
+          <Blog2 />
+          <Blog3 />
         </div>
 
-        <div className="hidden md:block"></div>
+        <div className="hidden md:block">
+          <Posts />
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import { FcGoogle } from "react-icons/fc";
 import { IoMdClose } from "react-icons/io";
 import { IoEyeOutline } from "react-icons/io5";
 import { RiFacebookCircleFill } from "react-icons/ri";
-import signin from "../assets/signin.png";
 
 export default function Signup({ view, setSignup, setLogin }) {
   if (!view) return null;
@@ -15,7 +14,7 @@ export default function Signup({ view, setSignup, setLogin }) {
     <div
       onClick={closeSignup}
       id="container"
-      className="flex justify-center md:p-52 backdrop-blur-sm fixed inset-0 top-40 md:top-0"
+      className="flex justify-center md:p-52 backdrop-blur-sm fixed inset-0 top-40 md:top-0 mx-5"
     >
       <div className="w-[736px] h-[530px] bg-white rounded-[8px]">
         <div className="hidden md:flex justify-center bg-[#EFFFF4] py-[17px] px-0 rounded-[8px] relative">
@@ -138,7 +137,7 @@ export default function Signup({ view, setSignup, setLogin }) {
             </p>
           </div>
           <div className="hidden md:block">
-            <img src={signin} alt="signin" />
+            <img src="https://i.ibb.co/xhSdhCN/signin.png" alt="signin" />
             <p className="text-[11px] text-black/[0.5] pl-5 mt-8">
               By signing up, you agree to our Terms & conditions, Privacy policy
             </p>

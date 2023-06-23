@@ -3,14 +3,13 @@ import { BsThreeDots } from "react-icons/bs";
 import { GiShare } from "react-icons/gi";
 import { IoEyeOutline } from "react-icons/io5";
 import { TfiPencilAlt } from "react-icons/tfi";
-import door from "../assets/door.png";
 import user2 from "../assets/user2.png";
 import Options from "./Options";
 export default function Blog2() {
   const [option, setOption] = useState(false);
   return (
     <div className="border rounded my-2">
-      <img src={door} alt="door}" />
+      <img src="https://i.ibb.co/QMc7tn3/door.png" alt="door}" />
       <div className="p-4">
         <div className="flex items-center gap-x-2">
           <TfiPencilAlt />

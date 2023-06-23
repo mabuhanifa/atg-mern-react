@@ -2,9 +2,33 @@ import { AiFillLike, AiOutlineInfoCircle } from "react-icons/ai";
 import { HiPencil } from "react-icons/hi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import activism from "../assets/activism.png";
+import leisure from "../assets/leisure.png";
 import mba from "../assets/mba.png";
 import philosophy from "../assets/philosophy.png";
 import Topics from "./Topics";
+
+const topics = [
+  {
+    title: "Leisure",
+    img: leisure,
+    followed: true,
+  },
+  {
+    title: "Activism",
+    img: activism,
+    followed: false,
+  },
+  {
+    title: "MBA",
+    img: mba,
+    followed: false,
+  },
+  {
+    title: "Philosophy",
+    img: philosophy,
+    followed: false,
+  },
+];
 
 export default function Posts() {
   return (
@@ -37,34 +61,9 @@ export default function Posts() {
         <p>RECOMMENDED GROUPS</p>
       </div>
       <div className="flex flex-col mt-8">
-        <Topics />
-        <div className="flex items-center justify-between my-3">
-          <div className="flex items-center gap-x-2">
-            <img src={activism} alt="leisure" className="rounded-lg" />
-            <h4> Activism</h4>
-          </div>
-          <button className="bg-[#EDEEF0] text-black px-3 py-1 rounded-[14px] text-[12px]">
-            Follow
-          </button>
-        </div>
-        <div className="flex items-center justify-between my-3">
-          <div className="flex items-center gap-x-2">
-            <img src={mba} alt="leisure" className="rounded-lg" />
-            <h4> MBA</h4>
-          </div>
-          <button className="bg-[#EDEEF0] text-black px-3 py-1 rounded-[14px] text-[12px]">
-            Follow
-          </button>
-        </div>
-        <div className="flex items-center justify-between my-3">
-          <div className="flex items-center gap-x-2">
-            <img src={philosophy} alt="leisure" className="rounded-lg" />
-            <h4> Philosophy</h4>
-          </div>
-          <button className="bg-[#EDEEF0] text-black px-3 py-1 rounded-[14px] text-[12px]">
-            Follow
-          </button>
-        </div>
+        {topics.map((topic) => (
+          <Topics topic={topic} key={topic.title} />
+        ))}
       </div>
       <div>
         <div className="flex justify-end mt-10">

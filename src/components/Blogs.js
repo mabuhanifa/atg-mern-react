@@ -1,6 +1,9 @@
 import { AiFillCaretDown, AiOutlineUsergroupAdd } from "react-icons/ai";
 import { RiLoginBoxLine } from "react-icons/ri";
 import { useModal } from "../contextAPI/context";
+import Blog from "./Blog";
+import Blog2 from "./Blog2";
+import Blog3 from "./Blog3";
 
 export default function Blogs() {
   const { setLogin, setSignup, user, setUser } = useModal();
@@ -59,7 +62,11 @@ export default function Blogs() {
       </nav>
 
       <div className="flex justify-between my-10">
-        <div className="flex flex-col"></div>
+        <div className="flex flex-col">
+          <Blog/>
+          <Blog2/>
+          <Blog3/>
+        </div>
 
         <div className="hidden md:block"></div>
       </div>
